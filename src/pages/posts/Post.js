@@ -72,7 +72,7 @@ const Post = (props) => {
           </div>
         </Media>
       </Card.Body>
-      <Link to={`/posts/${id}`}>
+      <Link to={`/post/${id}`}>
         <Card.Img src={image} alt={title} />
       </Link>
       <Card.Body>
@@ -103,7 +103,7 @@ const Post = (props) => {
             </OverlayTrigger>
           )}
           {likes_count}
-          <Link to={`/posts/${id}`}>
+          <Link to={`/post/${id}`}>
             <i className="far fa-comments" />
           </Link>
           {comments_count}
