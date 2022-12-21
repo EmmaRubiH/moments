@@ -39,7 +39,7 @@ export const ProfileDataProvider = ({ children }) => {
         },
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -62,7 +62,7 @@ export const ProfileDataProvider = ({ children }) => {
         },
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -70,14 +70,14 @@ export const ProfileDataProvider = ({ children }) => {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(
-          "/profiles/?ordering=-Followers_count"
+          "/profiles/?ordering=-followers_count"
         );
         setProfileData((prevState) => ({
           ...prevState,
           popularProfiles: data,
         }));
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 
@@ -94,5 +94,3 @@ export const ProfileDataProvider = ({ children }) => {
     </ProfileDataContext.Provider>
   );
 };
-
-export default ProfileDataContext;

@@ -36,8 +36,8 @@ const Post = (props) => {
     try {
       await axiosRes.delete(`/post/${id}/`);
       history.goBack();
-    } catch(err) {
-      console.log(err);
+    } catch (err) {
+      // console.log(err);
     }
   };
 
@@ -53,7 +53,7 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -69,7 +69,7 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -84,11 +84,11 @@ const Post = (props) => {
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>
             {is_owner && postPage && (
-              <MoreDropdown 
-              handleEdit={handleEdit}
-              handleDelete={handleDelete} 
+              <MoreDropdown
+                handleEdit={handleEdit}
+                handleDelete={handleDelete}
               />
-              )}
+            )}
           </div>
         </Media>
       </Card.Body>

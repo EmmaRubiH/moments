@@ -63,7 +63,7 @@ function PostCreateForm() {
       const { data } = await axiosReq.post("/post/", formData);
       history.push(`/post/${data.id}`);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
